@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexa - Digital Wellness Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Reflexa</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#journal">Journal</a>
+                <a href="#resources">Resources</a>
+                <a href="#workshops">Workshops</a>
+                <a href="#profile">Profile</a>
+            </div>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn">Login</button>
+                <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h1>Your Journey to Mental Wellness Starts Here</h1>
+                    <p>Reflexa provides a safe space for students to reflect, track their emotions, and access mental
+                        health resources.</p>
+                    <div class="hero-buttons">
+                        <button id="heroSignupBtn" class="btn btn-primary">Get Started</button>
+                        <button class="btn">Learn More</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Journal Section -->
+            <section id="journal" class="section">
+                <h2>Your Personal Journal</h2>
+                <div class="journal-container">
+                    <div class="journal-entry">
+                        <textarea id="journalText" placeholder="Write your thoughts here..."></textarea>
+                        <div class="journal-actions">
+                            <button class="btn">Save as Draft</button>
+                            <button class="btn btn-primary">Save Entry</button>
+                        </div>
+                    </div>
+                    <div class="journal-history">
+                        <h3>Recent Entries</h3>
+                        <div id="recentEntries" class="entries-list">
+                            <!-- Entries will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Section -->
+            <section id="resources" class="section">
+                <h2>Mental Health Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Articles</h3>
+                        <p>Read expert-written articles on mental wellness, stress management, and personal growth.</p>
+                        <a href="#articles" class="btn">Browse Articles</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Videos</h3>
+                        <p>Watch guided meditation, stress relief, and mindfulness practice videos.</p>
+                        <a href="#videos" class="btn">Watch Videos</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Podcasts</h3>
+                        <p>Listen to mental health podcasts and discussions from experts in the field.</p>
+                        <a href="#podcasts" class="btn">Listen Now</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Community</h3>
+                        <p>Connect with others and share experiences in a supportive environment.</p>
+                        <a href="#community" class="btn">Join Community</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Videos Section -->
+            <section id="videos" class="section">
+                <div class="container">
+                    <h2>Educational Videos</h2>
+                    <div class="videos-grid">
+                        <!-- Meditation Video -->
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/4pLUleLdwY4/maxresdefault.jpg" alt="Meditation for Beginners">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-content">
+                                <span class="video-category">Meditation</span>
+                                <h3>Meditation for Beginners</h3>
+                                <p>Learn the basics of meditation and mindfulness practices.</p>
+                                <div class="video-meta">
+                                    <span><i class="far fa-clock"></i> 10:15</span>
+                                    <span><i class="far fa-eye"></i> 1.2K views</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=4pLUleLdwY4" target="_blank" class="btn btn-youtube">
+                                    <i class="fab fa-youtube"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Stress Relief Video -->
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/0fL-pn80s-c/maxresdefault.jpg" alt="Stress Relief Techniques">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-content">
+                                <span class="video-category">Stress Relief</span>
+                                <h3>Stress Relief Techniques</h3>
+                                <p>Effective methods to manage and reduce stress levels.</p>
+                                <div class="video-meta">
+                                    <span><i class="far fa-clock"></i> 8:45</span>
+                                    <span><i class="far fa-eye"></i> 980 views</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=0fL-pn80s-c" target="_blank" class="btn btn-youtube">
+                                    <i class="fab fa-youtube"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Sleep Video -->
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/1Oa0TdCKwxI/maxresdefault.jpg" alt="Sleep Better Tips">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-content">
+                                <span class="video-category">Sleep</span>
+                                <h3>Sleep Better Tips</h3>
+                                <p>Improve your sleep quality with these proven techniques.</p>
+                                <div class="video-meta">
+                                    <span><i class="far fa-clock"></i> 12:30</span>
+                                    <span><i class="far fa-eye"></i> 1.5K views</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=1Oa0TdCKwxI" target="_blank" class="btn btn-youtube">
+                                    <i class="fab fa-youtube"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Study Techniques Video -->
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/IlU-zDU6aQ0/maxresdefault.jpg" alt="Effective Study Techniques">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-content">
+                                <span class="video-category">Study Tips</span>
+                                <h3>Effective Study Techniques</h3>
+                                <p>Learn proven methods to improve your study habits.</p>
+                                <div class="video-meta">
+                                    <span><i class="far fa-clock"></i> 15:20</span>
+                                    <span><i class="far fa-eye"></i> 2.1K views</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=IlU-zDU6aQ0" target="_blank" class="btn btn-youtube">
+                                    <i class="fab fa-youtube"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Desk Exercises Video -->
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/UBMk30rjy0o/maxresdefault.jpg" alt="Desk Exercises">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-content">
+                                <span class="video-category">Exercise</span>
+                                <h3>Desk Exercises</h3>
+                                <p>Simple exercises you can do at your desk to stay active.</p>
+                                <div class="video-meta">
+                                    <span><i class="far fa-clock"></i> 7:45</span>
+                                    <span><i class="far fa-eye"></i> 1.8K views</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=UBMk30rjy0o" target="_blank" class="btn btn-youtube">
+                                    <i class="fab fa-youtube"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Time Management Video -->
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/6J3wQqXh3qE/maxresdefault.jpg" alt="Time Management Tips">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-content">
+                                <span class="video-category">Productivity</span>
+                                <h3>Time Management Tips</h3>
+                                <p>Learn how to manage your time effectively.</p>
+                                <div class="video-meta">
+                                    <span><i class="far fa-clock"></i> 9:15</span>
+                                    <span><i class="far fa-eye"></i> 1.3K views</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=6J3wQqXh3qE" target="_blank" class="btn btn-youtube">
+                                    <i class="fab fa-youtube"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Articles Section -->
+            <section id="articles" class="section">
+                <h2>Featured Articles</h2>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Stress Management">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Stress Management</span>
+                            <h3>Effective Techniques for Managing Academic Stress</h3>
+                            <p>Learn practical strategies to handle academic pressure and maintain a healthy work-life
+                                balance.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-calendar"></i> March 15, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Mindfulness">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Mindfulness</span>
+                            <h3>Mindfulness Practices for Better Focus</h3>
+                            <p>Discover simple mindfulness exercises that can help improve your concentration and reduce
+                                anxiety.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 4 min read</span>
+                                <span><i class="far fa-calendar"></i> March 14, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Sleep">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Sleep</span>
+                            <h3>Improving Sleep Quality for Better Mental Health</h3>
+                            <p>Explore the connection between sleep and mental well-being, and learn tips for better
+                                sleep habits.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                                <span><i class="far fa-calendar"></i> March 13, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Exercise">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Physical Health</span>
+                            <h3>The Link Between Exercise and Mental Well-being</h3>
+                            <p>Understanding how regular physical activity can boost your mood and reduce stress levels.
+                            </p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 7 min read</span>
+                                <span><i class="far fa-calendar"></i> March 12, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Social Support">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Social Support</span>
+                            <h3>Building a Support Network in College</h3>
+                            <p>Learn how to create and maintain meaningful relationships while managing academic
+                                responsibilities.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-calendar"></i> March 11, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Time Management">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Time Management</span>
+                            <h3>Balancing Academics and Self-Care</h3>
+                            <p>Effective strategies for managing your time while prioritizing your mental health.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                                <span><i class="far fa-calendar"></i> March 10, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Nutrition">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Nutrition</span>
+                            <h3>Brain-Boosting Foods for Students</h3>
+                            <p>Discover how proper nutrition can enhance your cognitive function and mental well-being.
+                            </p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-calendar"></i> March 9, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Digital Wellness">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Digital Wellness</span>
+                            <h3>Managing Screen Time for Better Mental Health</h3>
+                            <p>Learn how to maintain a healthy relationship with technology while studying.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 4 min read</span>
+                                <span><i class="far fa-calendar"></i> March 8, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Career Development">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Career Development</span>
+                            <h3>Coping with Career Anxiety</h3>
+                            <p>Strategies for managing stress and uncertainty about future career paths.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                                <span><i class="far fa-calendar"></i> March 7, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Financial Wellness">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Financial Wellness</span>
+                            <h3>Managing Financial Stress in College</h3>
+                            <p>Tips for handling financial pressures while maintaining mental well-being.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-calendar"></i> March 6, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Campus Life">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Campus Life</span>
+                            <h3>Adjusting to Campus Life: A Mental Health Guide</h3>
+                            <p>Practical advice for managing the transition to college life and maintaining mental
+                                health.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 7 min read</span>
+                                <span><i class="far fa-calendar"></i> March 5, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Study Skills">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Study Skills</span>
+                            <h3>Effective Study Techniques for Better Mental Health</h3>
+                            <p>Learn study methods that reduce stress and improve academic performance while maintaining
+                                well-being.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                                <span><i class="far fa-calendar"></i> March 4, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Social Media">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Digital Wellness</span>
+                            <h3>Social Media and Mental Health: Finding Balance</h3>
+                            <p>Understanding the impact of social media on mental health and strategies for healthy
+                                usage.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-calendar"></i> March 3, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Creativity">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Creative Expression</span>
+                            <h3>Using Art and Creativity for Stress Relief</h3>
+                            <p>Explore how creative activities can help manage stress and improve mental well-being.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 4 min read</span>
+                                <span><i class="far fa-calendar"></i> March 2, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Resilience">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Personal Growth</span>
+                            <h3>Building Resilience in College</h3>
+                            <p>Develop coping skills and emotional strength to navigate academic challenges.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                                <span><i class="far fa-calendar"></i> March 1, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Cultural Adjustment">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Cultural Wellness</span>
+                            <h3>Navigating Cultural Identity in College</h3>
+                            <p>Understanding and maintaining cultural identity while adapting to college life.</p>
+                            <div class="article-meta">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-calendar"></i> February 29, 2024</span>
+                            </div>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Podcasts Section -->
+            <section id="podcasts" class="section">
+                <h2>Mental Health Podcasts</h2>
+                <div class="podcasts-grid">
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a081c3c005c2d2b6684a43721"
+                                alt="The Psychology Podcast">
+                        </div>
+                        <div class="podcast-content">
+                            <span class="podcast-category">Psychology</span>
+                            <h3>The Psychology Podcast</h3>
+                            <p>Exploring the depths of human behavior, mental health, and personal growth with leading
+                                experts.</p>
+                            <div class="podcast-meta">
+                                <span><i class="far fa-clock"></i> 45-60 min</span>
+                                <span><i class="far fa-calendar"></i> Weekly Episodes</span>
+                            </div>
+                            <div class="podcast-actions">
+                                <a href="https://open.spotify.com/show/4Yw4d5ld8NcbGqTd907Bo0" target="_blank"
+                                    class="btn"><i class="fab fa-spotify"></i> Listen on Spotify</a>
+                                <button class="btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a081c3c005c2d2b6684a43721"
+                                alt="The Mindset Mentor">
+                        </div>
+                        <div class="podcast-content">
+                            <span class="podcast-category">Personal Growth</span>
+                            <h3>The Mindset Mentor</h3>
+                            <p>Daily motivation and practical advice for improving your mental health and personal
+                                development.</p>
+                            <div class="podcast-meta">
+                                <span><i class="far fa-clock"></i> 15-20 min</span>
+                                <span><i class="far fa-calendar"></i> Daily Episodes</span>
+                            </div>
+                            <div class="podcast-actions">
+                                <a href="https://open.spotify.com/show/7GkO2poedjbltWT5lduL5w" target="_blank"
+                                    class="btn"><i class="fab fa-spotify"></i> Listen on Spotify</a>
+                                <button class="btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a081c3c005c2d2b6684a43721"
+                                alt="The Anxiety Coaches Podcast">
+                        </div>
+                        <div class="podcast-content">
+                            <span class="podcast-category">Anxiety</span>
+                            <h3>The Anxiety Coaches Podcast</h3>
+                            <p>Expert guidance and practical techniques for managing anxiety and stress in daily life.
+                            </p>
+                            <div class="podcast-meta">
+                                <span><i class="far fa-clock"></i> 20-30 min</span>
+                                <span><i class="far fa-calendar"></i> Weekly Episodes</span>
+                            </div>
+                            <div class="podcast-actions">
+                                <a href="https://open.spotify.com/show/5AN8do1BAAI4jA5YkP9HcE" target="_blank"
+                                    class="btn"><i class="fab fa-spotify"></i> Listen on Spotify</a>
+                                <button class="btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a081c3c005c2d2b6684a43721"
+                                alt="The Happiness Lab">
+                        </div>
+                        <div class="podcast-content">
+                            <span class="podcast-category">Happiness</span>
+                            <h3>The Happiness Lab</h3>
+                            <p>Science-based insights and strategies for cultivating happiness and well-being.</p>
+                            <div class="podcast-meta">
+                                <span><i class="far fa-clock"></i> 30-40 min</span>
+                                <span><i class="far fa-calendar"></i> Weekly Episodes</span>
+                            </div>
+                            <div class="podcast-actions">
+                                <a href="https://open.spotify.com/show/0FbOQyt5n7Z7ZoEqn6LDK7" target="_blank"
+                                    class="btn"><i class="fab fa-spotify"></i> Listen on Spotify</a>
+                                <button class="btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a081c3c005c2d2b6684a43721"
+                                alt="The Mental Illness Happy Hour">
+                        </div>
+                        <div class="podcast-content">
+                            <span class="podcast-category">Mental Health</span>
+                            <h3>The Mental Illness Happy Hour</h3>
+                            <p>Open discussions about mental health challenges and recovery journeys.</p>
+                            <div class="podcast-meta">
+                                <span><i class="far fa-clock"></i> 45-60 min</span>
+                                <span><i class="far fa-calendar"></i> Weekly Episodes</span>
+                            </div>
+                            <div class="podcast-actions">
+                                <a href="https://open.spotify.com/show/0FbOQyt5n7Z7ZoEqn6LDK7" target="_blank"
+                                    class="btn"><i class="fab fa-spotify"></i> Listen on Spotify</a>
+                                <button class="btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a081c3c005c2d2b6684a43721"
+                                alt="The Science of Happiness">
+                        </div>
+                        <div class="podcast-content">
+                            <span class="podcast-category">Science</span>
+                            <h3>The Science of Happiness</h3>
+                            <p>Research-backed strategies for improving mental well-being and life satisfaction.</p>
+                            <div class="podcast-meta">
+                                <span><i class="far fa-clock"></i> 20-25 min</span>
+                                <span><i class="far fa-calendar"></i> Weekly Episodes</span>
+                            </div>
+                            <div class="podcast-actions">
+                                <a href="https://open.spotify.com/show/0FbOQyt5n7Z7ZoEqn6LDK7" target="_blank"
+                                    class="btn"><i class="fab fa-spotify"></i> Listen on Spotify</a>
+                                <button class="btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Workshops Section -->
+            <section id="workshops" class="section">
+                <h2>Live Wellness Workshops</h2>
+                <div class="workshops-grid">
+                    <div class="workshop-card">
+                        <div class="workshop-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Stress Management</h3>
+                        </div>
+                        <p>Learn effective techniques to manage academic stress and maintain work-life balance.</p>
+                        <div class="workshop-details">
+                            <span><i class="far fa-calendar"></i> Every Monday</span>
+                            <span><i class="far fa-clock"></i> 2:00 PM</span>
+                        </div>
+                        <button class="btn">Register</button>
+                    </div>
+                    <div class="workshop-card">
+                        <div class="workshop-header">
+                            <i class="fas fa-spa"></i>
+                            <h3>Mindfulness</h3>
+                        </div>
+                        <p>Practice mindfulness and meditation techniques for better focus and emotional well-being.</p>
+                        <div class="workshop-details">
+                            <span><i class="far fa-calendar"></i> Every Wednesday</span>
+                            <span><i class="far fa-clock"></i> 3:00 PM</span>
+                        </div>
+                        <button class="btn">Register</button>
+                    </div>
+                    <div class="workshop-card">
+                        <div class="workshop-header">
+                            <i class="fas fa-heart"></i>
+                            <h3>Self-Care</h3>
+                        </div>
+                        <p>Discover practical self-care strategies for maintaining mental and physical health.</p>
+                        <div class="workshop-details">
+                            <span><i class="far fa-calendar"></i> Every Friday</span>
+                            <span><i class="far fa-clock"></i> 4:00 PM</span>
+                        </div>
+                        <button class="btn">Register</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Music Section -->
+            <section id="music" class="section">
+                <div class="container">
+                    <h2>Relaxation Playlists</h2>
+                    <div class="playlist-grid">
+                        <!-- Meditation Playlist -->
+                        <div class="playlist-card">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZqd5JICZI0u" width="100%"
+                                height="352" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <!-- Sleep Playlist -->
+                        <div class="playlist-card">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYcDQ1hSjOpY" width="100%"
+                                height="352" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <!-- Focus Playlist -->
+                        <div class="playlist-card">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ" width="100%"
+                                height="352" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Reflexa</h3>
+                    <p>Your digital space for mental wellness</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#journal">Journal</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#workshops">Workshops</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reflexa. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal for Login/Signup -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="loginForm" class="auth-form">
+                <h2>Welcome Back</h2>
+                <div class="social-auth">
+                    <button type="button" class="btn btn-google" onclick="signInWithGoogle()">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                            alt="Google Logo">
+                        Sign in with Google
+                    </button>
+                </div>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+            <div id="signupForm" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <div class="social-auth">
+                    <button type="button" class="btn btn-google" onclick="signInWithGoogle()">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                            alt="Google Logo">
+                        Sign up with Google
+                    </button>
+                </div>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" required> I agree to the Terms of Service
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Reset Modal -->
+    <div id="passwordResetModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-form">
+                <h2>Reset Password</h2>
+                <p class="reset-instructions">Enter your email address and we'll send you instructions to reset your
+                    password.</p>
+                <form id="passwordResetForm">
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit" class="btn btn-primary">Send Reset Link</button>
+                    <button type="button" class="btn" id="backToLoginBtn">Back to Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Learn More Modal -->
+    <div id="learnMoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About Reflexa</h2>
+            <div class="modal-body">
+                <p>Reflexa is your comprehensive digital wellness platform designed specifically for students. Here's
+                    what we offer:</p>
+                <ul>
+                    <li><strong>Personal Journal:</strong> Track your daily emotions and thoughts in a private, secure
+                        space.</li>
+                    <li><strong>Mood Tracking:</strong> Monitor your emotional well-being with our intuitive mood
+                        tracking system.</li>
+                    <li><strong>Mental Health Resources:</strong> Access expert-curated articles, videos, and podcasts.
+                    </li>
+                    <li><strong>Live Workshops:</strong> Join interactive sessions on stress management, mindfulness,
+                        and self-care.</li>
+                    <li><strong>Community Support:</strong> Connect with peers in a safe, supportive environment.</li>
+                </ul>
+                <p>Start your journey to better mental health today!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Google Sign-In Script -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
