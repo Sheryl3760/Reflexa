@@ -10,10 +10,10 @@ class EmailService {
         try {
             // In a real application, this would make an API call to your email service
             console.log(`Welcome email sent to ${user.email}`);
-            
+
             // Simulate email sending delay
             await new Promise(resolve => setTimeout(resolve, 1000));
-            
+
             return {
                 success: true,
                 message: 'Welcome email sent successfully'
@@ -31,10 +31,10 @@ class EmailService {
         try {
             // In a real application, this would make an API call to your email service
             console.log(`Password reset email sent to ${email}`);
-            
+
             // Simulate email sending delay
             await new Promise(resolve => setTimeout(resolve, 1000));
-            
+
             return {
                 success: true,
                 message: 'Password reset email sent successfully'
