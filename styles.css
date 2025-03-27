@@ -385,7 +385,8 @@ section {
 .video-thumbnail {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
     overflow: hidden;
 }
 
@@ -530,7 +531,9 @@ section {
     margin-top: 1rem;
 }
 
-.workshop-date, .workshop-time, .workshop-duration {
+.workshop-date,
+.workshop-time,
+.workshop-duration {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -771,6 +774,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
     /* Navigation */
     .mobile-menu-btn {
         display: block;
@@ -947,6 +951,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
     /* Navigation */
     .logo {
         font-size: 1.2rem;
@@ -1037,6 +1042,7 @@ footer {
 
 /* Print Styles */
 @media print {
+
     .navbar,
     .auth-buttons,
     .btn {
@@ -1167,4 +1173,4 @@ footer {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
-} 
+}
